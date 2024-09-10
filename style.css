@@ -1,0 +1,680 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff; /* Black background */
+  color: #fff;
+}
+
+/* Grid Background Styling */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #333 1px, transparent 1px),
+    linear-gradient(to bottom, #333 1px, transparent 1px);
+  background-size: 40px 40px; /* Grid spacing */
+  z-index: -1; /* Make sure it stays behind the content */
+  background-color: #000;
+}
+
+/* Container for alignment */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Ensure spacing between elements */
+  align-items: center; /* Center items vertically */
+}
+
+.hero-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #000;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #444; /* Grey line to separate navbar */
+}
+
+.logo-redirect {
+  text-decoration: none;
+}
+
+.navbar .brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  text-decoration: none; /* no underline */
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links .nav-btn {
+  background-color: transparent; /* Transparent background */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Padding for buttons */
+  border: 2px solid #fff; /* White border */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: 500; /* Medium font weight */
+  margin-right: 15px; /* Space between buttons */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.nav-links .nav-btn:hover {
+  background-color: #fff; /* Change background to white on hover */
+  color: #000; /* Change text to black on hover */
+}
+
+.contact-btn {
+  border: 2px solid #007bff;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #0056b3;
+  border: 2px solid #0056b3;
+}
+
+/* Hero Section Styling */
+.hero {
+  color: #fff;
+  padding: 150px 0 15px; /* Adjusted padding to account for navbar */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex; /* Added flexbox for column layout */
+  flex-direction: column; /* Set to column layout */
+  align-items: center; /* Center content horizontally */
+  gap: 30px; /* Add spacing between title, subtitle, and image */
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px; /* Slightly reduce margin */
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto; /* Center the subtitle */
+}
+
+/* Hero Image */
+.hero-image {
+  text-align: center;
+}
+
+.hero-image img {
+  width: 90%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Signup Section Styling */
+.signup-section {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+  color: #000;
+}
+
+.signup-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.signup-header {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.signup-form {
+  margin-bottom: 50px; /* Add margin to space out form from the boxes */
+}
+
+/* Benefits Boxes */
+.benefits-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px; /* Space between boxes */
+}
+
+.benefit-box {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-box h3 {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.benefit-box p {
+  color: #000;
+  font-size: 14px;
+}
+
+/* Footer Section Styling */
+.footer {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px; /* Space between sections */
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1; /* Allow sections to grow equally */
+  max-width: 400px;
+  text-align: center; /* Center-align content */
+}
+
+.footer-left {
+  text-align: left; /* Align left section to the left */
+}
+
+.footer-header {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0; /* Padding around the iframe */
+}
+
+.footer-right {
+  text-align: left; /* Align right section to the left */
+}
+
+.social-header {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column; /* Align social links vertically */
+  gap: 15px; /* Space between social links */
+}
+
+.social-link {
+  background-color: #222; /* Dark grey background */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border-radius: 8px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center; /* Center icon and text vertically */
+  gap: 10px; /* Space between icon and text */
+  transition: transform 0.3s ease; /* Smooth hover transition */
+}
+
+.social-link i {
+  font-size: 18px; /* Size of social media icons */
+}
+
+.social-link:hover {
+  transform: scale(1.05); /* Enlarge slightly on hover */
+}
+
+/* Main Section Styling */
+.main-section {
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  padding: 60px 20px; /* Padding around the section */
+  text-align: center; /* Center-align text */
+}
+
+/* Header and Description */
+.newsletter-header {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px; /* Space below header */
+  color: #000; /* Black header text */
+}
+
+.newsletter-description {
+  font-size: 18px;
+  margin-bottom: 40px; /* Space below description */
+  max-width: 600px; /* Max width for description */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6; /* Increase line spacing for readability */
+  color: #555; /* Grey text for description */
+}
+
+/* Benefits Boxes */
+.newsletter-benefits {
+  display: flex;
+  justify-content: space-around;
+  gap: 0px; /* Space between boxes */
+  margin-bottom: 40px; /* Space below boxes */
+  flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+}
+
+.benefit-box {
+  background-color: #f2f2f2; /* Light grey background */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  width: 100%;
+  max-width: 300px; /* Width for boxes */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  margin-bottom: 20px; /* Space below each box */
+}
+
+.benefit-box h3 {
+  color: #000; /* Black header */
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.benefit-box p {
+  color: #333; /* Dark grey text */
+  font-size: 14px;
+}
+
+/* Subscription Form Styling */
+.subscribe-form {
+  margin-top: 40px; /* Space above form */
+}
+
+/* Newsletter Embed */
+.newsletter-embed {
+  flex: 1 1 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.newsletter-embed iframe {
+  width: 100%;
+  max-width: 480px;
+  height: 320px;
+  border-radius: 4px;
+  border: 2px solid #e5e7eb;
+  background-color: transparent;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align all sections */
+    text-align: center; /* Center text for all sections */
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    max-width: 100%; /* Make sections take full width */
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center; /* Center align text on smaller screens */
+  }
+
+  .footer-header {
+    font-size: 28px; /* Adjust font size for smaller screens */
+  }
+
+  .footer-description {
+    font-size: 14px; /* Adjust description font size */
+  }
+
+  .social-header {
+    font-size: 18px; /* Adjust social header size */
+  }
+
+  .social-link {
+    width: 100%; /* Make social links take full width */
+    justify-content: center; /* Center content */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-header {
+    font-size: 24px; /* Further adjust font size for small screens */
+  }
+
+  .footer-description {
+    font-size: 12px; /* Further adjust font size */
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .benefits-container {
+    flex-direction: column;
+    align-items: center; /* Center boxes in smaller screens */
+  }
+
+  .benefit-box {
+    max-width: 80%; /* Reduce max-width on smaller screens */
+  }
+}
+
+/* General Styling - Reuse existing styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero {
+  color: #fff;
+  padding: 150px 0 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-image img {
+  width: 90%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Calculator Section Styling */
+.calculator-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  color: #000;
+  text-align: center;
+}
+
+.calculator-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-header {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calculator-form label {
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.calculator-form input,
+.calculator-form select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.calculate-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculate-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #000;
+  padding: 40px 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-right .socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.social-box:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calculator-container {
+    padding: 30px;
+  }
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+  display: none; /* Hide by default */
+  cursor: pointer; /* Pointer cursor */
+  color: #fff; /* White color for icon */
+  font-size: 28px; /* Size of hamburger icon */
+}
+
+/* Contact Section Styling */
+.contact-section {
+  padding: 250px 0; /* Top and bottom padding */
+  text-align: center; /* Center-align text */
+  color: #000; /* White text color */
+  background-color: #fff; /* Black background color */
+}
+
+.contact-section h1 {
+  font-size: 36px; /* Large font size for header */
+  margin-bottom: 20px; /* Space below header */
+}
+
+.contact-section p {
+  font-size: 18px; /* Regular font size for paragraphs */
+  margin-bottom: 10px; /* Space below paragraphs */
+}
+
+.contact-section a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* No underline */
+  font-weight: bold; /* Bold text */
+}
+
+.contact-section a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Show hamburger menu and hide nav-links on smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide navigation links */
+    position: absolute; /* Position absolutely */
+    top: 60px; /* Place it below the navbar */
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: #000; /* Black background */
+    flex-direction: column; /* Vertical direction */
+    align-items: center; /* Centered links */
+    z-index: 1001; /* Above other content */
+    padding-top: 20px; /* Padding at the top */
+  }
+
+  .nav-links a {
+    padding: 15px 0; /* More padding for links */
+    width: 100%; /* Full width for each link */
+    text-align: center; /* Centered text */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger menu */
+    position: relative; /* Relative position */
+    margin-left: auto; /* Push it to the right */
+  }
+}
+
+/* Show nav-links when active class is added */
+.nav-links.active {
+  display: flex; /* Display in flex mode */
+}
+
+/* Adjust the spacing of navigation buttons */
+.nav-btn {
+  margin-right: 20px; /* Space between nav buttons */
+}
+
+/* Responsive styles for nav items */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex; /* Display links normally */
+    margin-left: auto; /* Push links to the right */
+  }
+
+  .nav-links a {
+    margin-left: 20px; /* Space between nav items */
+  }
+}
